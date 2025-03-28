@@ -22,7 +22,7 @@ Bật MySQL
 
 Bước 2: Clone Dự Án
 
-Mở Command Prompt hoặc Terminal
+Mở Command Prompt hoặc Terminal:
 1)Di chuyển đến thư mục htdocs của XAMPP:
 cd C:\xampp\htdocs
 2)Clone dự án từ repository:
