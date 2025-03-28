@@ -1,21 +1,21 @@
 # QuanLyHoSoNhanSu
 Hướng Dẫn Cài Đặt và Chạy Dự Án
-Yêu Cầu Tiên Quyết
+Yêu Cầu Tiên Quyết:
 
-Git
-Visual Studio Code (VSCode)
-XAMPP
+Git,
+Visual Studio Code (VSCode),
+XAMPP,
 PHP
-MySQL
+
 
 Bước 1: Cài Đặt Môi Trường
 
-Tải và cài đặt Git
-Tải và cài đặt XAMPP
-Tải và cài đặt Visual Studio Code
-Khởi động XAMPP Control Panel
+Tải và cài đặt Git,
+Tải và cài đặt XAMPP,
+Tải và cài đặt Visual Studio Code,
+Khởi động XAMPP Control Panel:
 
-Bật Apache
+Bật Apache,
 Bật MySQL
 
 
