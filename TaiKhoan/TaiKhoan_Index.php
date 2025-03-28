@@ -133,13 +133,14 @@
 
                             $searchTerm = isset($_GET['searchTerm']) ? $_GET['searchTerm'] : '';
                             if ($searchTerm) {
-                                $list_sql = "SELECT * FROM NguoiDung 
+                                $list_sql = "SELECT * FROM nguoidung 
+                                JOIN NhanSu ON nguoidung.MaNhanSu = nhansu.MaNhanSu 
                                             WHERE TenDangNhap LIKE '%$searchTerm%' 
                                             OR PhanQuyen LIKE '%$searchTerm%'
                                             ORDER BY PhanQuyen, TenDangNhap";
                             } else {
-                                $list_sql = "SELECT * FROM NguoiDung
-                                            JOIN NhanSu ON NguoiDung.MaNhanSu = NhanSu.MaNhanSu 
+                                $list_sql = "SELECT * FROM nguoidung
+                                            JOIN NhanSu ON nguoidung.MaNhanSu = nhansu.MaNhanSu 
                                             ORDER BY PhanQuyen, TenDangNhap";
                             }
 
@@ -364,8 +365,6 @@
                 });
         });
         </script>
-
-
         <div class="modal" id="updateModal">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -483,7 +482,6 @@
 
         </div>
     </section>
-
     <script src="../JS/Admin_Script.js?v = <?php echo time(); ?>"></script>
 </body>
 
