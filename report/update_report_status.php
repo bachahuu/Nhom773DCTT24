@@ -1,4 +1,5 @@
 <?php
+
 // Kết nối cơ sở dữ liệu
 require_once 'Connect.php';
 

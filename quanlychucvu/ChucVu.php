@@ -1,6 +1,7 @@
 <?php
-require_once '../Connect.php';
 
+require_once '../Connect.php';
+header('Content-Type: text/html; charset=utf-8');
 $search_term = '';
 if (isset($_POST['search_term'])) {
     $search_term = mysqli_real_escape_string($conn, $_POST['search_term']);

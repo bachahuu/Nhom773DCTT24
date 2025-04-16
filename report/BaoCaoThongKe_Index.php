@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/Admin_Style.css?v=<?php echo time(); ?>">
@@ -93,7 +94,7 @@
 
         <!-- Form tạo báo cáo nhân sự -->
         <div class="container mt-4">
-            <h3 class="text-center">Tạo Báo Cáo Nhân Sự</h3>
+            <h3 class="text-center" style="margin-top: 55px;">Tạo Báo Cáo Nhân Sự</h3>
             <form action="create_report.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="LoaiBaoCao">Loại Báo Cáo:</label>
@@ -134,8 +135,10 @@
                 </thead>
                 <tbody>
                     <?php
+                    
                     // Kết nối cơ sở dữ liệu
                     require_once '../Connect.php';
+                    header('Content-Type: text/html; charset=utf-8');
 
                     $sql = "SELECT * FROM baocaothongke ORDER BY NgayBaoCao DESC";
                     $result = mysqli_query($conn, $sql);

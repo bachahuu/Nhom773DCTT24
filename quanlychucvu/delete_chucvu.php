@@ -1,4 +1,5 @@
 <?php
+
 require_once '../Connect.php';
 //lay sid xuong 
 if (isset($_GET['Sid'])) {

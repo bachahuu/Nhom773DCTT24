@@ -1,6 +1,7 @@
 <?php
-require_once '../Connect.php';
 
+require_once '../Connect.php';
+header('Content-Type: text/html; charset=utf-8');
 $maBaoCao = $_GET['id'];
 
 $sql = "SELECT * FROM baocaothongke WHERE MaBaoCao = '$maBaoCao'";

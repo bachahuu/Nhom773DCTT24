@@ -1,7 +1,7 @@
 <?php
 // Kết nối cơ sở dữ liệu
 require_once '../Connect.php';
-
+header('Content-Type: text/html; charset=utf-8');
 // Lấy mã nhân sự từ URL
 $maNhanSu = isset($_GET['maNhanSu']) ? $_GET['maNhanSu'] : '';
 

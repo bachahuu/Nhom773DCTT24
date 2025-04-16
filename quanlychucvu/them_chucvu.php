@@ -1,4 +1,5 @@
 <?php 
+
 require_once '../Connect.php';
 $chucvu = $_POST['TenChucVu'];
 $MOTA = $_POST['MoTa'];

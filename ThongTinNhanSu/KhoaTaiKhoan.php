@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 // Bao gồm file kết nối cơ sở dữ liệu
 require_once '../Connect.php';
 session_start();
@@ -14,7 +15,7 @@ $tenDangNhap = $_SESSION['TenDangNhap'];
 
 // Cập nhật mật khẩu mới vào cơ sở dữ liệu
 $trangThaiTaiKhoan = 'Bị khóa';
-$sqlCapNhatTrangThai = "UPDATE NguoiDung SET TrangThaiTaiKhoan = '$trangThaiTaiKhoan' WHERE TenDangNhap = ?";
+$sqlCapNhatTrangThai = "UPDATE nguoidung SET TrangThaiTaiKhoan = '$trangThaiTaiKhoan' WHERE TenDangNhap = ?";
 $chuoiCapNhat = $conn->prepare($sqlCapNhatTrangThai);
 $chuoiCapNhat->bind_param("s", $tenDangNhap);
 

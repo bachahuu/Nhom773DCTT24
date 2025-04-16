@@ -1,7 +1,8 @@
 <?php
+
 // Kết nối cơ sở dữ liệu
 include '../Connect.php';
-
+header('Content-Type: text/html; charset=utf-8');
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['MaDinhDanh'])) {
     $maDinhDanh = $_POST['MaDinhDanh'];
 

@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $matKhau = trim($_POST['MatKhau']);
 
     // Chuẩn bị câu lệnh SQL
-    $stmt = $conn->prepare("SELECT MaNguoiDung, MatKhau, PhanQuyen, TrangThaiTaiKhoan FROM NguoiDung WHERE TenDangNhap = ?");
+    $stmt = $conn->prepare("SELECT MaNguoiDung, MatKhau, PhanQuyen, TrangThaiTaiKhoan FROM nguoidung WHERE TenDangNhap = ?");
     $stmt->bind_param("s", $tenDangNhap);
 
     // Thực thi câu lệnh SQL

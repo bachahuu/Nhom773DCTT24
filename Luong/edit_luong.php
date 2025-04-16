@@ -1,7 +1,8 @@
 <?php
+
 // Kết nối cơ sở dữ liệu
 require_once '../Connect.php';
-
+header('Content-Type: text/html; charset=utf-8');
 // Kiểm tra nếu có tham số 'id' trong URL, nghĩa là người dùng nhấn "Sửa"
 if (isset($_GET['id'])) {
     $maLuong = $_GET['id']; // Mã lương từ URL

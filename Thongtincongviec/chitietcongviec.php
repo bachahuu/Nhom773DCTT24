@@ -1,5 +1,7 @@
 <?php 
+
 require_once '../Connect.php';
+header('Content-Type: text/html; charset=utf-8');
 if(isset($_GET['macongviec'])){
     $macongviec = $_GET['macongviec'];
 }else{
@@ -16,6 +18,7 @@ $result_congviec = mysqli_query($conn,$sql_select);
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi Tiết Công Việc</title>
     <!-- Bootstrap 4 CSS -->

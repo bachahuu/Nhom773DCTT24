@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -131,6 +132,7 @@
                     <tbody>
                         <?php
                             require_once '../Connect.php';
+                            header('Content-Type: text/html; charset=utf-8');
 
                             $searchTerm = isset($_GET['searchTerm']) ? $_GET['searchTerm'] : '';
                             if ($searchTerm) {
@@ -361,7 +363,7 @@
                                 <label for="TenChucVu">Chức vụ</label>
                                 <select class="form-control" id="TenChucVu" name="TenChucVu">
                                     <?php
-                                        $author_sql = "SELECT MaChucVu, TenChucVu FROM ChucVu";
+                                        $author_sql = "SELECT MaChucVu, TenChucVu FROM chucvu";
                                         $author_result = mysqli_query($conn, $author_sql);
 
                                         while ($author_row = mysqli_fetch_assoc($author_result)) {
@@ -459,7 +461,7 @@
                                 <label for="update_TenChucVu">Chức vụ</label>
                                 <select class="form-control" id="update_TenChucVu" name="TenChucVu">
                                     <?php
-                                        $author_sql = "SELECT MaChucVu, TenChucVu FROM ChucVu";
+                                        $author_sql = "SELECT MaChucVu, TenChucVu FROM chucvu";
                                         $author_result = mysqli_query($conn, $author_sql);
 
                                         while ($author_row = mysqli_fetch_assoc($author_result)) {

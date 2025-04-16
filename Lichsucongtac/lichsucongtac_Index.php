@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý lịch sử công tác</title>
 
@@ -180,6 +182,7 @@
                     </thead class="thead-light">
                     <tbody>
                         <?php
+                 header('Content-Type: text/html; charset=utf-8');
                 require_once '../Connect.php';
 
                 // Câu truy vấn SQL

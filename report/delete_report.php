@@ -1,4 +1,5 @@
 <?php
+
 require_once '../Connect.php';  // Kết nối với CSDL
 
 // Kiểm tra nếu có id báo cáo cần xóa

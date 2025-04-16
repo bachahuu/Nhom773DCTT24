@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -129,12 +130,14 @@
                     </thead>
                     <tbody>
                         <?php
+                       
                             require_once '../Connect.php';
-
-                            $searchTerm = isset($_GET['searchTerm']) ? $_GET['searchTerm'] : '';
+                            header('Content-Type: text/html; charset=utf-8');
+                            // Lấy searchTerm và thoát ký tự để tránh SQL injection
+                            $searchTerm = isset($_GET['searchTerm']) ? mysqli_real_escape_string($conn, $_GET['searchTerm']) : '';
                             if ($searchTerm) {
                                 $list_sql = "SELECT * FROM nguoidung 
-                                            JOIN nhansu ON nguoidung.MaNhanSu = nhansu.MaNhanSu 
+                                JOIN nhansu ON nguoidung.MaNhanSu = nhansu.MaNhanSu 
                                             WHERE TenDangNhap LIKE '%$searchTerm%' 
                                             OR PhanQuyen LIKE '%$searchTerm%'
                                             ORDER BY PhanQuyen, TenDangNhap";
@@ -145,7 +148,12 @@
                             }
 
                             $result = mysqli_query($conn, $list_sql);
+                            // Kiểm tra lỗi truy vấn
+                            if (!$result) {
+                            die("Query failed: " . mysqli_error($conn));
+                            }
 
+                            if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
                         <tr>
@@ -191,6 +199,10 @@
                         </tr>
                         <?php
                             }
+                        }else {
+                            echo "<tr><td colspan='6'>No data found</td></tr>";
+                        }
+                        mysqli_free_result($result);
                         ?>
                         <tr>
                             <td colspan="9"><button type="button" class="btn btn-primary" data-toggle="modal"
@@ -275,7 +287,7 @@
                     </div>
 
                     <div class="modal-body">
-                        <form action="Taikhoan_Insert.php" method="post">
+                        <form action="TaiKhoan_Insert.php" method="post">
                             <div class="form-group">
                                 <label for="TenDangNhap">Tên đăng nhập</label>
                                 <input type="text" class="form-control" id="TenDangNhap" name="TenDangNhap" required>

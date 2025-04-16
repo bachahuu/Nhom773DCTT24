@@ -1,7 +1,8 @@
 <?php
+
 // Kết nối cơ sở dữ liệu
 require_once '../Connect.php';
-
+header('Content-Type: text/html; charset=utf-8');
 // Kiểm tra nếu tháng được gửi từ form
 if (isset($_GET['month']) && !empty($_GET['month'])) {
     $month = $_GET['month']; // Dạng YYYY-MM

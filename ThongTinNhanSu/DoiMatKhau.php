@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 // Bao gồm file kết nối cơ sở dữ liệu
 require_once '../Connect.php';
 session_start();
@@ -24,7 +25,7 @@ if ($matKhauMoi !== $xacNhanMatKhau) {
 $tenDangNhap = $_SESSION['TenDangNhap'];
 
 // Lấy mật khẩu hiện tại từ cơ sở dữ liệu
-$sqlLayMatKhau = "SELECT MatKhau FROM NguoiDung WHERE TenDangNhap = ?";
+$sqlLayMatKhau = "SELECT MatKhau FROM nguoidung WHERE TenDangNhap = ?";
 $chuoiChuanBi = $conn->prepare($sqlLayMatKhau);
 $chuoiChuanBi->bind_param("s", $tenDangNhap);
 $chuoiChuanBi->execute();
@@ -42,7 +43,7 @@ if (!password_verify($matKhauCu, $matKhauMaHoa)) {
 $matKhauMoiMaHoa = password_hash($matKhauMoi, PASSWORD_BCRYPT);
 
 // Cập nhật mật khẩu mới vào cơ sở dữ liệu
-$sqlCapNhatMatKhau = "UPDATE NguoiDung SET MatKhau = ? WHERE TenDangNhap = ?";
+$sqlCapNhatMatKhau = "UPDATE nguoidung SET MatKhau = ? WHERE TenDangNhap = ?";
 $chuoiCapNhat = $conn->prepare($sqlCapNhatMatKhau);
 $chuoiCapNhat->bind_param("ss", $matKhauMoiMaHoa, $tenDangNhap);
 

@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 // Bao gồm file kết nối cơ sở dữ liệu
 require_once '../Connect.php'; // Đảm bảo đường dẫn chính xác đến file Connect.php
 
@@ -13,7 +14,7 @@ if (!isset($_SESSION['TenDangNhap'])) {
 $tenDangNhap = $_SESSION['TenDangNhap'];
 
 // Lấy thông tin người dùng từ bảng NguoiDung
-$sqlNguoiDung = "SELECT * FROM NguoiDung WHERE TenDangNhap = ?";
+$sqlNguoiDung = "SELECT * FROM nguoidung WHERE TenDangNhap = ?";
 $stmtNguoiDung = $conn->prepare($sqlNguoiDung);
 $stmtNguoiDung->bind_param("s", $tenDangNhap);
 $stmtNguoiDung->execute();
@@ -25,7 +26,7 @@ if ($resultNguoiDung->num_rows > 0) {
 
     // Lấy thông tin nhân sự từ bảng NhanSu dựa vào MaNhanSu
     $maNhanSu = $data['MaNhanSu'];
-    $sqlNhanSu = "SELECT * FROM NhanSu WHERE MaNhanSu = ?";
+    $sqlNhanSu = "SELECT * FROM nhansu WHERE MaNhanSu = ?";
     $stmtNhanSu = $conn->prepare($sqlNhanSu);
     $stmtNhanSu->bind_param("i", $maNhanSu);
     $stmtNhanSu->execute();
@@ -37,7 +38,7 @@ if ($resultNguoiDung->num_rows > 0) {
 
         // Lấy thông tin chức vụ từ bảng ChucVu
         $maChucVu = $dataNhanSu['MaChucVu'];
-        $sqlChucVu = "SELECT TenChucVu FROM ChucVu WHERE MaChucVu = ?";
+        $sqlChucVu = "SELECT TenChucVu FROM chucvu WHERE MaChucVu = ?";
         $stmtChucVu = $conn->prepare($sqlChucVu);
         $stmtChucVu->bind_param("i", $maChucVu);
         $stmtChucVu->execute();
@@ -69,6 +70,7 @@ if ($resultNguoiDung->num_rows > 0) {
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

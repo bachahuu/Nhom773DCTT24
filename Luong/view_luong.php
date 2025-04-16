@@ -3,7 +3,7 @@
 session_start();
 // Kết nối với cơ sở dữ liệu
 require_once '../Connect.php';
-
+header('Content-Type: text/html; charset=utf-8');
 // Kiểm tra nếu MaNguoiDung tồn tại trong session
 if (isset($_SESSION['MaNguoiDung'])) {
     $maNguoiDung = $_SESSION['MaNguoiDung'];
