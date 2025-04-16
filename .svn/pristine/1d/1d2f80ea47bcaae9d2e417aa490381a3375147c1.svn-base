@@ -1,0 +1,21 @@
+<?php
+// Thông tin kết nối database
+$host = 'localhost';
+$username = 'user001';
+$password = '1'; // Thay bằng mật khẩu bạn đã đặt
+$database = 'quanlyhosonhansu_db';
+
+// Tạo kết nối
+$conn = new mysqli($host, $username, $password, $database);
+
+// Kiểm tra kết nối
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
+
+// Thiết lập charset để hỗ trợ tiếng Việt
+$conn->set_charset("utf8");
+
+// (Tùy chọn) Uncomment dòng dưới để kiểm tra kết nối
+// echo "Kết nối thành công!";
+?>
