@@ -1,7 +1,7 @@
 <?php
 
 require_once '../Connect.php';
-header('Content-Type: text/html; charset=utf-8');
+
 $search_term = '';
 if (isset($_POST['search_term'])) {
     $search_term = mysqli_real_escape_string($conn, $_POST['search_term']);
@@ -80,7 +80,7 @@ $i = 1;
                     </a></li>
                 <li><a href="#">
                         <i class="uil uil-briefcase-alt"></i>
-                        <span class="link-name">Quản lý Chức Vụ</span>
+                        <span class="link-name">QUẢN LÝ CHỨC VỤ</span>
                     </a></li>
                 <li><a href="../Nghiphep/Nghiphep_Admin_Index.php">
                         <i class="uil uil-file-info-alt"></i>

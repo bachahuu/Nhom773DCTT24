@@ -4,7 +4,7 @@ session_start();
 
 // Kết nối với cơ sở dữ liệu
 require_once '../Connect.php';
-header('Content-Type: text/html; charset=utf-8');
+
 // Kiểm tra nếu người dùng đã đăng nhập
 if (!isset($_SESSION['TenDangNhap'])) {
     echo '<script>alert("Vui lòng đăng nhập!"); window.location.href = "login.php";</script>';

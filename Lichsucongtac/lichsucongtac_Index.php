@@ -182,7 +182,7 @@
                     </thead class="thead-light">
                     <tbody>
                         <?php
-                 header('Content-Type: text/html; charset=utf-8');
+                 
                 require_once '../Connect.php';
 
                 // Câu truy vấn SQL

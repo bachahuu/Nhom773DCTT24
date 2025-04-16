@@ -132,7 +132,6 @@
                         <?php
                        
                             require_once '../Connect.php';
-                            header('Content-Type: text/html; charset=utf-8');
                             // Lấy searchTerm và thoát ký tự để tránh SQL injection
                             $searchTerm = isset($_GET['searchTerm']) ? mysqli_real_escape_string($conn, $_GET['searchTerm']) : '';
                             if ($searchTerm) {

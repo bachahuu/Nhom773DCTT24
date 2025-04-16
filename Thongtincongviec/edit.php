@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
+
 // Kết nối cơ sở dữ liệu
 include('../Connect.php'); // File kết nối đến database
 

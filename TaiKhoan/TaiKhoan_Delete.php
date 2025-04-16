@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
+
     //lay du lieu id can xoa
     $maNguoiDung = $_GET['MaNguoiDung'];
     // echo $matheloai;

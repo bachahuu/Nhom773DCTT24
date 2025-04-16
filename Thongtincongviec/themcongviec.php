@@ -1,5 +1,5 @@
 <?php 
-header('Content-Type: text/html; charset=utf-8');
+
 require_once '../Connect.php';
 // Lấy dữ liệu từ form
 $madinhdanh = isset($_POST['madinhdanh']) ? $_POST['madinhdanh'] : null; // Mã nhansu

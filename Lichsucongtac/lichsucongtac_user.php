@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
+
 session_start(); // Bắt đầu phiên làm việc session
 
 require_once '../Connect.php'; // Đảm bảo đường dẫn chính xác đến file Connect.php

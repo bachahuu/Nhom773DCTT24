@@ -1,5 +1,4 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
     $maLichSu = $_GET['MaLichSu'];
         // Kiểm tra và lấy dữ liệu từ form
         $manhansu = isset($_GET['MaNhanSu']) ? $_GET['MaNhanSu'] : '';

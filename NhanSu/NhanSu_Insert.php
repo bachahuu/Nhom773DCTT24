@@ -1,7 +1,6 @@
 <?php
     // Kết nối tới cơ sở dữ liệu
     require_once '../Connect.php'; // File connect.php chứa thông tin kết nối MySQL
-    header('Content-Type: text/html; charset=utf-8');
     // Kiểm tra nếu form được gửi đi (người dùng nhấn nút Thêm)
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Lấy dữ liệu từ form

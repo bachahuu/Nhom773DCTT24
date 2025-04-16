@@ -1,6 +1,6 @@
 <?php
 require_once '../Connect.php';
-header('Content-Type: text/html; charset=utf-8');
+
 // Kiểm tra và xử lý form tạo báo cáo
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $loaiBaoCao = $_POST['LoaiBaoCao'];

@@ -138,8 +138,6 @@
                     
                     // Kết nối cơ sở dữ liệu
                     require_once '../Connect.php';
-                    header('Content-Type: text/html; charset=utf-8');
-
                     $sql = "SELECT * FROM baocaothongke ORDER BY NgayBaoCao DESC";
                     $result = mysqli_query($conn, $sql);
 

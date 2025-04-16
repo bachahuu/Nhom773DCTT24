@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
+
 // Bao gồm file kết nối cơ sở dữ liệu
 require_once '../Connect.php'; // Đảm bảo đường dẫn chính xác đến file Connect.php
 

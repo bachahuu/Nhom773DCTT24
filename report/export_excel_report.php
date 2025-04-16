@@ -2,7 +2,7 @@
 
 // Kết nối cơ sở dữ liệu
 require_once '../Connect.php';
-header('Content-Type: text/html; charset=utf-8');
+
 // Lấy ID báo cáo từ URL
 $id = isset($_GET['id']) ? $_GET['id'] : null;
 

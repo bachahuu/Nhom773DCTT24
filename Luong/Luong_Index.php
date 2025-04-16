@@ -120,7 +120,7 @@
 
                     // Kết nối cơ sở dữ liệu
                     require_once '../Connect.php';
-                    header('Content-Type: text/html; charset=utf-8');
+                    
                     // Truy vấn dữ liệu lương và nhân sự
                     $lietke_sql = "SELECT * FROM luong JOIN nhansu ON nhansu.MaNhanSu = luong.MaNhanSu";
                     $result = mysqli_query($conn, $lietke_sql);
