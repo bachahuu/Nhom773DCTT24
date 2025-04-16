@@ -11,7 +11,7 @@ if (isset($_SESSION['TenDangNhap'])) {
     $tenDangNhap = $_SESSION['TenDangNhap']; // Lấy tên đăng nhập từ session
 
     // Truy vấn để lấy MaNhanSu từ tên đăng nhập
-    $sqlGetMaNhanSu = "SELECT MaNhanSu FROM nguoidung WHERE TenDangNhap = ?";
+    $sqlGetMaNhanSu = "SELECT MaNhanSu FROM NguoiDung WHERE TenDangNhap = ?";
     $stmt = $conn->prepare($sqlGetMaNhanSu);
     $stmt->bind_param("s", $tenDangNhap);
     $stmt->execute();
@@ -34,7 +34,7 @@ if (isset($_SESSION['TenDangNhap'])) {
     $resultnghi = $stmt->get_result();
 
     // Truy vấn để lấy thông tin tên nhân sự
-    $sqlGetNhanSu = "SELECT HoTen FROM nhansu WHERE MaNhanSu = ?";
+    $sqlGetNhanSu = "SELECT HoTen FROM NhanSu WHERE MaNhanSu = ?";
     $stmt = $conn->prepare($sqlGetNhanSu);
     $stmt->bind_param("i", $maNhanSu);
     $stmt->execute();
