@@ -1,4 +1,5 @@
 <?php 
+
 require_once '../Connect.php';
 // Lấy dữ liệu từ form
 $madinhdanh = isset($_POST['madinhdanh']) ? $_POST['madinhdanh'] : null; // Mã nhansu

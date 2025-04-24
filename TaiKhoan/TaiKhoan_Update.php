@@ -1,6 +1,8 @@
 <?php
-require_once '../Connect.php';
 
+require_once '../Connect.php';
+// Thêm vào đầu file PHP, sau khi kết nối đến cơ sở dữ liệu
+mysqli_set_charset($conn, "utf8mb4");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Lấy dữ liệu từ form
     $maNguoiDung = $_POST['MaNguoiDung'];

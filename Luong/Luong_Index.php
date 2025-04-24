@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -116,9 +117,10 @@
                 </thead>
                 <tbody>
                     <?php
+
                     // Kết nối cơ sở dữ liệu
                     require_once '../Connect.php';
-
+                    
                     // Truy vấn dữ liệu lương và nhân sự
                     $lietke_sql = "SELECT * FROM luong JOIN nhansu ON nhansu.MaNhanSu = luong.MaNhanSu";
                     $result = mysqli_query($conn, $lietke_sql);

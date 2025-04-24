@@ -1,4 +1,5 @@
 <?php
+
 // Bao gồm file kết nối cơ sở dữ liệu
 require_once '../Connect.php';
 session_start();

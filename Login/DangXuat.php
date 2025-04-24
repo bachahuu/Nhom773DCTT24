@@ -1,4 +1,5 @@
 <?php
+
     session_start();
     
     // Hủy tất cả các biến session

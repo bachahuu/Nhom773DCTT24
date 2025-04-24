@@ -1,4 +1,5 @@
 <?php
+
 session_start(); // Bắt đầu phiên làm việc session
 
 require_once '../Connect.php'; // Đảm bảo đường dẫn chính xác đến file Connect.php
@@ -8,7 +9,7 @@ if (isset($_SESSION['TenDangNhap'])) {
     $tenDangNhap = $_SESSION['TenDangNhap']; // Lấy tên đăng nhập từ session
 
     // Truy vấn để lấy MaNhanSu từ tên đăng nhập
-    $sqlGetMaNhanSu = "SELECT MaNhanSu FROM NguoiDung WHERE TenDangNhap = ?";
+    $sqlGetMaNhanSu = "SELECT MaNhanSu FROM nguoidung WHERE TenDangNhap = ?";
     $stmt = $conn->prepare($sqlGetMaNhanSu);
     $stmt->bind_param("s", $tenDangNhap);
     $stmt->execute();
@@ -25,7 +26,7 @@ if (isset($_SESSION['TenDangNhap'])) {
     }
 
     // Truy vấn để lấy lịch sử công tác của nhân sự
-    $sqlLichSuCongTac = "SELECT * FROM LichSuCongTac WHERE MaNhanSu = ?";
+    $sqlLichSuCongTac = "SELECT * FROM lichsucongtac WHERE MaNhanSu = ?";
     $stmt = $conn->prepare($sqlLichSuCongTac);
     $stmt->bind_param("i", $maNhanSu);
     $stmt->execute();

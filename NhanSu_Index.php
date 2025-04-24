@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'Connect.php';// Kết nối database
-
+header('Content-Type: text/html; charset=utf-8');
 $hoTenNhanSu = "";
 if (isset($_SESSION['MaNguoiDung'])) {
     $maNguoiDung = $_SESSION['MaNguoiDung'];

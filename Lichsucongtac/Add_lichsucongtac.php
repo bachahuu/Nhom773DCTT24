@@ -1,4 +1,5 @@
 <?php
+
 require_once '../Connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

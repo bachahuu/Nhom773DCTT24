@@ -1,4 +1,5 @@
 <?php
+
 // Bao gồm file kết nối cơ sở dữ liệu
 require_once '../Connect.php'; // Đảm bảo đường dẫn chính xác đến file Connect.php
 
@@ -69,6 +70,7 @@ if ($resultNguoiDung->num_rows > 0) {
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

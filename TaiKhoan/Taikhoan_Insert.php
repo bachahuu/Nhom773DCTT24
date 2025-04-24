@@ -1,4 +1,5 @@
 <?php
+
 // Kết nối tới cơ sở dữ liệu
 require_once '../Connect.php'; // File connect.php chứa thông tin kết nối MySQL
 

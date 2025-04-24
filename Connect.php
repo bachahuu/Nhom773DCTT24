@@ -1,8 +1,8 @@
 <?php
  $servername='localhost';
- $user='user001';
- $pass='1';
- $db='quanlyhosonhansu_db';
+ $user='bac';
+ $pass='bac2004';
+ $db='quanlyhosonhansu';
  $conn=mysqli_connect($servername,$user,$pass,$db);
 if (!$conn) {
      die("Connection failed: " . mysqli_connect_error());
@@ -10,3 +10,4 @@ if (!$conn) {
     // Cài đặt charset là utf8mb4 cho kết nối
 mysqli_set_charset($conn, "utf8mb4");
 ?>
+

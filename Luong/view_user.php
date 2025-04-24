@@ -15,7 +15,7 @@ if (!isset($_SESSION['TenDangNhap'])) {
 $tenDangNhap = $_SESSION['TenDangNhap'];
 
 // Lấy thông tin người dùng từ bảng NguoiDung
-$sqlNguoiDung = "SELECT * FROM NguoiDung WHERE TenDangNhap = ?";
+$sqlNguoiDung = "SELECT * FROM nguoidung WHERE TenDangNhap = ?";
 $stmtNguoiDung = $conn->prepare($sqlNguoiDung);
 $stmtNguoiDung->bind_param("s", $tenDangNhap);
 $stmtNguoiDung->execute();

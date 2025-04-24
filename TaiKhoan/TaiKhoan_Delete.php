@@ -1,4 +1,5 @@
 <?php
+
     //lay du lieu id can xoa
     $maNguoiDung = $_GET['MaNguoiDung'];
     // echo $matheloai;

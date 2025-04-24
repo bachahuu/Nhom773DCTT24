@@ -1,4 +1,5 @@
 <?php
+
 require_once '../Connect.php';
 
 $maBaoCao = $_GET['id'];

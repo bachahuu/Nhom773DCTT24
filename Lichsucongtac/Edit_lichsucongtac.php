@@ -1,4 +1,5 @@
 <?php
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Kết nối đến cơ sở dữ liệu
     require_once '../Connect.php';

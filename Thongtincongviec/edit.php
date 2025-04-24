@@ -1,4 +1,5 @@
 <?php
+
 // Kết nối cơ sở dữ liệu
 include('../Connect.php'); // File kết nối đến database
 
